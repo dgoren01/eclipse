@@ -1,20 +1,21 @@
 package pack1;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 public class Example2 {
 	
-	int a;
-	int b;
-	Example2(int c,int d)
-	{
-	a=c;
-	b=d;
-	System.out.println(a+b);	
-	}
+
 
 	public static void main(String[] args) {
 		
-		Example2 example2=new Example2(1, 2);
-		
+
+		System.setProperty("webdriver.chrome.driver", "E:\\selenium\\chromedriver.exe");
+		   
+		   WebDriver driver= new ChromeDriver();
+		   driver.get("https://www.google.com");
+		  System.out.println(driver.getTitle());
+		     	
 
 	}
 
